@@ -1,0 +1,33 @@
+
+./SimpleAMPA_NMDA.c: .././MOOC-neurons-and-synapses-2017/ModelingSynapses/mechanisms/SimpleAMPA_NMDA.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\n"
+	(cd ".././MOOC-neurons-and-synapses-2017/ModelingSynapses/mechanisms"; MODLUNIT=$(NRNUNITS) $(NOCMODL) SimpleAMPA_NMDA.mod -o "/Users/martinvielvoye/Simulation-Neuroscience/Week 4/x86_64")
+
+./SimpleAMPA_NMDA.o: ./SimpleAMPA_NMDA.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\n"
+	$(COMPILE) -I".././MOOC-neurons-and-synapses-2017/ModelingSynapses/mechanisms" $(INCLUDES) -fPIC -c $< -o $@
+
+./StochasticTsodyksMarkram_AMPA_NMDA.c: .././MOOC-neurons-and-synapses-2017/ModelingSynapses/mechanisms/StochasticTsodyksMarkram_AMPA_NMDA.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\n"
+	(cd ".././MOOC-neurons-and-synapses-2017/ModelingSynapses/mechanisms"; MODLUNIT=$(NRNUNITS) $(NOCMODL) StochasticTsodyksMarkram_AMPA_NMDA.mod -o "/Users/martinvielvoye/Simulation-Neuroscience/Week 4/x86_64")
+
+./StochasticTsodyksMarkram_AMPA_NMDA.o: ./StochasticTsodyksMarkram_AMPA_NMDA.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\n"
+	$(COMPILE) -I".././MOOC-neurons-and-synapses-2017/ModelingSynapses/mechanisms" $(INCLUDES) -fPIC -c $< -o $@
+
+./TsodyksMarkram_AMPA_NMDA.c: .././MOOC-neurons-and-synapses-2017/ModelingSynapses/mechanisms/TsodyksMarkram_AMPA_NMDA.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\n"
+	(cd ".././MOOC-neurons-and-synapses-2017/ModelingSynapses/mechanisms"; MODLUNIT=$(NRNUNITS) $(NOCMODL) TsodyksMarkram_AMPA_NMDA.mod -o "/Users/martinvielvoye/Simulation-Neuroscience/Week 4/x86_64")
+
+./TsodyksMarkram_AMPA_NMDA.o: ./TsodyksMarkram_AMPA_NMDA.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\n"
+	$(COMPILE) -I".././MOOC-neurons-and-synapses-2017/ModelingSynapses/mechanisms" $(INCLUDES) -fPIC -c $< -o $@
+
+./vecevent.c: .././MOOC-neurons-and-synapses-2017/ModelingSynapses/mechanisms/vecevent.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\n"
+	(cd ".././MOOC-neurons-and-synapses-2017/ModelingSynapses/mechanisms"; MODLUNIT=$(NRNUNITS) $(NOCMODL) vecevent.mod -o "/Users/martinvielvoye/Simulation-Neuroscience/Week 4/x86_64")
+
+./vecevent.o: ./vecevent.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\n"
+	$(COMPILE) -I".././MOOC-neurons-and-synapses-2017/ModelingSynapses/mechanisms" $(INCLUDES) -fPIC -c $< -o $@
+
